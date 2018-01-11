@@ -141,7 +141,9 @@ $(document).ready(function () {
 <p>Be sure you download the document to your current working directory. Next, load in necessary packages:</p>
 <pre class="r"><code>require(dplyr) #structuring data
 require(ggplot2) #creating visualizations
-options(scipen=1, digits=1) ##rounding results</code></pre>
+require(knitr) #set options for kniting file
+options(scipen=1, digits=1) ##rounding results
+opts_knit$set(base.dir = &quot;C:/Users/preisn1/Documents/Coursera&quot;, fig.path =&quot;C:/Users/preisn1/Documents/Coursera&quot; )</code></pre>
 <p>Below, we will read the data into variable ‘active’, put it into a table, and look at the dimensions and a summary of the data.</p>
 <pre class="r"><code>active &lt;- read.csv(file = &quot;activity.csv&quot;)
 active &lt;- tbl_df(active)

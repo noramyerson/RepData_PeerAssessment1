@@ -19,7 +19,9 @@ Be sure you download the document to your current working directory. Next, load 
 ```{r loadPkg, warning = FALSE, message = FALSE}
 require(dplyr) #structuring data
 require(ggplot2) #creating visualizations
+require(knitr) #set options for kniting file
 options(scipen=1, digits=1) ##rounding results
+opts_knit$set(base.dir = "C:/Users/preisn1/Documents/Coursera", fig.path ="C:/Users/preisn1/Documents/Coursera" )
 ```
 
 Below, we will read the data into variable 'active', put it into a table, and look at the dimensions and a summary of the data.
